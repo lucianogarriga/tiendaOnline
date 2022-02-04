@@ -4,7 +4,14 @@
   box-sizing: border-box;
 }
 
-.App{
-  background: #222831;
-  height: 100vh;
+.logo{
+  width: 37vh;
+  height: 16vh;
+  margin-left: 15px;
+}
+
+.content{
+  margin-top: 20px;
+  padding: 12px;
+  height: 3000px;
 }
