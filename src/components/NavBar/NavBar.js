@@ -1,20 +1,21 @@
 import ReplaceImg from '../../assets/replace.png'
 import React, {Component} from 'react';
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import {CartWidget} from '../Carrito/CartWidget'
 
 export default class NavbarComp extends Component {
     render(){
         return(
             <div>
                 <Navbar bg="dark" variant="dark"
-                sticky='top' expand='lg' collapseOnSelect>
+                sticky='top' expand='lg'>
                     <Navbar.Brand>
                         <img src={ReplaceImg} className="ReplaceImg"/>
                     </Navbar.Brand>
-
+                    <CartWidget/>
                     <Navbar.Toggle />
                     <Navbar.Collapse>
-                    <Nav>
+                    <Nav style={{alignItems:'center'}}>
                         <NavDropdown title='Equipos'>
                         <NavDropdown.Item href='equipos/iphone'>Iphone</NavDropdown.Item>
                         <NavDropdown.Item href='equipos/samsung'>Samsung</NavDropdown.Item>
@@ -28,7 +29,6 @@ export default class NavbarComp extends Component {
                         <Nav.Link href="about">Carrito</Nav.Link>
                     </Nav>
                     </Navbar.Collapse>
-                    
                 </Navbar>
             </div>
         )
