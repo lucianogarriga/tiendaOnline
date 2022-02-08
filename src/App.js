@@ -9,7 +9,7 @@ function App() {
       <div className='App'> 
       <NavbarComp />
         <div className='content'>
-      <ItemListContainer/>
+      <ItemListContainer title="Bienvenido a REPLACE" sub="Tu proximo celular a un click"/>
         </div>
       </div>
     </>

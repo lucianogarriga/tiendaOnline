@@ -1,9 +1,10 @@
+import './ItemListCont.css';
 
-export const ItemListContainer = () =>{
+export const ItemListContainer = (props) =>{
     return(
-        <div>
-        <h1 style={{textAlign:'center'}}>Bienvenido a REPLACE</h1>
-        <p style={{textAlign:'center'}}>Tu proximo celular a un click</p>
+        <div className="itemUno">
+        <h1 style={{textAlign:'center'}}> {props.title}</h1>
+        <p style={{textAlign:'center'}}> {props.sub}</p>
         </div>
     )
 }
