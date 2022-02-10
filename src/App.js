@@ -9,7 +9,9 @@ function App() {
       <div className='App'> 
       <NavbarComp />
         <div className='content'>
-      <ItemListContainer title="Bienvenido a REPLACE" sub="Tu proximo celular a un click"/>
+      <ItemListContainer title="Samsung S21+" sub= "Pantalla 6,7 / Octa Core / 12 MP + 64 MP + 12 MP cámara principal"/>
+      <ItemListContainer title="Iphone 11 Pro 128GB" sub= "Pantalla 6,7 / Octa Core / 12 MP + 64 MP + 12 MP cámara principal"/>
+      <ItemListContainer title="Xiaomi MI 11" sub= "Pantalla 6,7 / Octa Core / 12 MP + 64 MP + 12 MP cámara principal"/>
         </div>
       </div>
     </>
@@ -17,3 +19,5 @@ function App() {
 }
 
 export default App;
+
+
