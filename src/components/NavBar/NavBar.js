@@ -12,9 +12,7 @@ export default class NavbarComp extends Component {
                     <Navbar.Brand>
                         <img src={ReplaceImg} className="ReplaceImg"/>
                     </Navbar.Brand>
-
                     <CartWidget/>
-                    
                     <Navbar.Toggle />
                     <Navbar.Collapse>
                     <Nav style={{alignItems:'center'}}>
