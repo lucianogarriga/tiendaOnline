@@ -5,7 +5,7 @@ import data from '../Data/Data'
 
 const productos = data;
 
-export const ItemList = () =>{
+export const ItemList = (props) =>{
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState()
 
@@ -33,13 +33,12 @@ export const ItemList = () =>{
             <section className="py-4 container">              
                 {loading && <p style={{color: "white"}}>Cargando lista de productos...</p> }
                 <div className="row justify-content-center">
-                    {data.productData.map(item => (
-                                <Item title={item.title} description={item.description} 
-                                pictureUrl={item.pictureUrl}  price={item.price}
-                                stock={item.stock}
+                {products.map(product => 
+                                <Item title={product.title} pictureUrl={product.pictureUrl} 
+                                price={product.price} stock={product.stock}
                                 onAddCard={(e) => console.log(e)}/>
                             )
-                        )}
+                        }
                 </div>
             </section>
         </>

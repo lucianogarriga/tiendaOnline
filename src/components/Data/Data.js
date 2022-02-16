@@ -7,8 +7,7 @@ import Band5 from '../../assets/band5.jpg'
 import Buds from '../../assets/dots.jpg'
 import Watch from '../../assets/watch.jfif'
 
-const data = {
-    productData:[
+const productos = [
         {
             id: 1, 
             title: 'Samsung S21', 
@@ -59,7 +58,6 @@ const data = {
             stock: 2,
             pictureUrl: Watch
         }
-    ],
-}
+    ]
 
-export default data
+export default productos
