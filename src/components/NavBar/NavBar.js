@@ -1,10 +1,9 @@
 import ReplaceImg from '../../assets/replace.png'
-import React, {Component} from 'react';
+import React from 'react';
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
-import {CartWidget} from '../Carrito/CartWidget'
+import {CartWidget} from './CartWidget'
 
-export default class NavbarComp extends Component {
-    render(){
+const NavbarComp = () =>{
         return(
             <div>
                 <Navbar bg="dark" variant="dark"
@@ -32,5 +31,6 @@ export default class NavbarComp extends Component {
                 </Navbar>
             </div>
         )
-    }
 }
+
+export default NavbarComp;
