@@ -1,5 +1,4 @@
-import React from "react";
-// import { NavLink } from "react-router-dom";
+import React from "react"; 
 
 export const Item = ({id,title, price, pictureUrl}) =>{
 
@@ -14,5 +13,4 @@ export const Item = ({id,title, price, pictureUrl}) =>{
             </div>
         </div>
     )
-}
-//Los parametros de este Item no los esta tomando en ninguna parte de la pagina
+} 
