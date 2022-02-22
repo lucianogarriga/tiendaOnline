@@ -18,8 +18,8 @@ const NavbarComp = () =>{
                 <Nav style={{alignItems:'center'}}>
 
                         <Link style={{textDecoration:'none', color:'white', fontSize:20, padding:5}} to="/">Home</Link>
-                        <Link style={{textDecoration:'none', color:'white', fontSize:20, padding:5}} to="/productos">Productos</Link>
-                        <Link style={{textDecoration:'none', color:'white', fontSize:20, padding:5}} to="/lista-items/detalle">Celulares</Link> 
+                        <Link style={{textDecoration:'none', color:'white', fontSize:20, padding:5}} to="/items">Productos</Link>
+                        <Link style={{textDecoration:'none', color:'white', fontSize:20, padding:5}} to="/contacto">Contacto</Link> 
 
                         {/* <Link to="/cart">Carrito</Link> */}
 

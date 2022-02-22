@@ -13,7 +13,7 @@ function App() {
       <NavbarComp/>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/lista-items/" element={<ItemListContainer/>} />
+        <Route path="/items/" element={<ItemListContainer/>} />
         <Route path="/lista-items/:itemName" element={<ItemDetail/>} />
         <Route path="/items/:id" element={<ItemDetailContainer/>} />
       </Routes>
