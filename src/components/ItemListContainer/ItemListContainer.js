@@ -7,10 +7,9 @@ import '../ItemListContainer/ItemListContainer.css'
 
      return(
        <div style={{textAlign:'center'}}>
-             
-                 <h1 style={{margin:'1rem'}}>{greetings}</h1>
-                 <ItemList/>
-         </div>
+          <h1 style={{margin:'1rem'}}>{greetings}</h1>
+          <ItemList/>
+        </div>
      )
 }
 

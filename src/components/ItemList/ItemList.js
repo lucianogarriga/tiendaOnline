@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { useState } from "react"
+import { Link, NavLink } from "react-router-dom"
 import {Item} from '../Item/Item'
 import data from '../Data/Data'
 
@@ -24,7 +25,7 @@ export const ItemList = (props) =>{
         const promise = new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(productos)
-            }, 2000)
+            }, 1000)
         })
         return promise
     }
@@ -36,8 +37,8 @@ export const ItemList = (props) =>{
             {
                 products.map(product => 
                         <Item id={product.id} title={product.title} pictureUrl={product.pictureUrl} 
-                        price={product.price} stock={product.stock}
-                        onAddCard={(e) => console.log(e)}/>
+                        price={product.price}/>
+                  
                 )
             }
             </div>

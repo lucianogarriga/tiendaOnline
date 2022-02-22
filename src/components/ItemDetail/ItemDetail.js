@@ -1,21 +1,32 @@
 import ItemCount from '../ItemCount/ItemCount'
 import '../ItemListContainer/ItemListContainer.css'
+import { useParams } from 'react-router-dom'
+import productos from '../Data/Data'
+// import { useState } from 'react'
+import { useEffect } from 'react'
 
+ export const ItemDetail = ({price, title, pictureUrl} ) =>{
 
- export const ItemDetail = ({ id, title, description, pictureUrl }) =>{
-  
+    const {itemName} = useParams();
+    console.log('itemName', itemName);
+
+     
     
      return(
-        <div key={id} className="card" style={{width:'18rem', margin:'15px', padding:'2px'}}>
-            <img className="card-img-top" src={pictureUrl} alt="Imagen"></img>
-            
-            <div className="card-body">
-                <h5 className="card-title">{title}</h5>
-                <ItemCount stock={5} initial={1} />
+        <>
+        <div className='container'>
+            <div className='row' style={{textAlign:'justify'}}>
+                <div className='col-md-6' style={{marginTop: '1rem'}}> 
+                    <img className="card-img-top" src={pictureUrl} alt="Imagen"></img> 
+                </div>
+                <div className='col-md-6' style={{marginTop: '1rem', marginBottom: '1.5rem'}}>
+                    <h5 className="card-title">{title}</h5>
+                    <p className="card-text" style={{fontSize: '2rem', marginTop: '10px'}}> ${price}</p>
+                    <p>Detalle del Producto: {itemName}</p>
+                    <ItemCount stock={5} initial={1} />
+                </div>
             </div>
-        </div>
-                 
-          
-       
+            </div>
+        </>
      )
 }
