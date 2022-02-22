@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 export const Item = ({id,title, price, pictureUrl}) =>{
 
@@ -10,8 +10,9 @@ export const Item = ({id,title, price, pictureUrl}) =>{
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
                 <p> ${price}</p>
-                <NavLink to={`/items/{item.id}`} class="btn btn-primary"> Ver mas</NavLink>
+                <button class="btn btn-primary"> Ver mas</button>
             </div>
         </div>
     )
 }
+//Los parametros de este Item no los esta tomando en ninguna parte de la pagina

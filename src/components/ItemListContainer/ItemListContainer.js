@@ -1,15 +1,13 @@
 import '../ItemListContainer/ItemListContainer.css'
 import { useEffect } from "react"
 import { useState } from "react"
-import { Link, NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import {Item} from '../Item/Item'
 import data from '../Data/Data'
 
 const productos = data;
 
- export const ItemListContainer = (props) =>{
-    
-    const {greetings} = props
+ export const ItemListContainer = (props) =>{ 
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState()
@@ -40,9 +38,10 @@ const productos = data;
             <div className="row justify-content-center">
             {
                 products.map(product => 
+                    <Link to={`/items/${product.id}`}>
                         <Item id={product.id} title={product.title} pictureUrl={product.pictureUrl} 
                         price={product.price} onAddCard={(e) => console.log(e)}/>
-                  
+                    </Link>
                 )
             }
             </div>

@@ -10,11 +10,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <BrowserRouter>
-    <NavbarComp/>
+      <NavbarComp/>
       <Routes>
         <Route path="/" element={<Home/>} />
-        {/* <Route path="/lista-items/" element={<ItemListContainer/>} />
-        <Route path="/lista-items/:itemName" element={<ItemDetail/>} /> */}
+        <Route path="/lista-items/" element={<ItemListContainer/>} />
+        <Route path="/lista-items/:itemName" element={<ItemDetail/>} />
         <Route path="/items/:id" element={<ItemDetailContainer/>} />
       </Routes>
     </BrowserRouter>
