@@ -34,14 +34,15 @@ const productos = data;
     return(
         <>  
         <div style={{textAlign: 'center'}}>
+            <h1 style={{margin: 15}}>Bienvenido a la tienda oficial REPLACE</h1>
         {loading && <h5 style={{margin:"1rem", padding:"10px"}}>Cargando lista de productos</h5>}
             <div className="row justify-content-center">
             {
                 products.map(product => 
-                    <Link to={`/items/${product.id}`}>
+                    
                         <Item id={product.id} title={product.title} pictureUrl={product.pictureUrl} 
                         price={product.price} onAddCard={(e) => console.log(e)}/>
-                    </Link>
+                     
                 )
             }
             </div>
