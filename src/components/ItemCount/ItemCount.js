@@ -29,7 +29,6 @@ const ItemCount = ({stock, initial, onAdd}) =>{
                 <button className="btn btn-secondary" style={{margin:"5px"}} onClick={restar}>-</button>
                 <button className="btn btn-primary" >Comprar</button>
                 <button className="btn btn-secondary" style={{margin:"5px"}} onClick={sumar}>+</button>
-
         </>
     )
 }

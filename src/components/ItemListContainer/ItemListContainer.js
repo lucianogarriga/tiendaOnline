@@ -39,10 +39,8 @@ const productos = data;
             <div className="row justify-content-center">
             {
                 products.map(product => 
-                    
                         <Item id={product.id} title={product.title} pictureUrl={product.pictureUrl} 
                         price={product.price} onAddCard={(e) => console.log(e)}/>
-                     
                 )
             }
             </div>

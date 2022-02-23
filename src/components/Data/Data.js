@@ -14,6 +14,7 @@ const productos = [
             description: 'El Samsung S21 viene a cambiar los paradigmas normales de los smartphones. Posee triple camara trasera, una camara frontal que sirve para el desbloqueo de la pantalla a traves del Face ID',
             price: 120000, 
             stock: 3,
+            category: 'celulares',
             pictureUrl: S21
         },
         {
@@ -22,6 +23,7 @@ const productos = [
             title: 'Motorola Edge', 
             price: 100000, 
             stock: 5,
+            category: 'celulares',
             pictureUrl: Motorola
         },
             {id: 'iphone-11', 
@@ -29,6 +31,7 @@ const productos = [
             title: 'Iphone 11', 
             price: 190000, 
             stock: 2,
+            category: 'celulares',
             pictureUrl: Iphone11
         },
             {id: 'iphone-12-pro', 
@@ -36,6 +39,7 @@ const productos = [
             title: 'Iphone 12 Pro', 
             price: 250000, 
             stock: 1,
+            category: 'celulares',
             pictureUrl: Iphone12
         },
             {id: 's20-fe', 
@@ -43,6 +47,7 @@ const productos = [
             title: 'Samsung S20 FE', 
             price: 80000, 
             stock: 5,
+            category: 'celulares',
             pictureUrl: S20fe
         },
             {id: 'band5', 
@@ -50,6 +55,7 @@ const productos = [
             title: 'Xiaomi Band 5', 
             price: 3500, 
             stock: 7,
+            category: 'accesorios',
             pictureUrl: Band5
         },
             {id: 'earbuds', 
@@ -57,6 +63,7 @@ const productos = [
             title: 'Xiaomi Earbuds', 
             price: 3200, 
             stock: 4,
+            category: 'accesorios',
             pictureUrl: Buds
         },
             {id: 'active', 
@@ -64,6 +71,7 @@ const productos = [
             title: 'Samsung Active', 
             price: 23200, 
             stock: 2,
+            category: 'accesorios',
             pictureUrl: Watch
         }
     ]
