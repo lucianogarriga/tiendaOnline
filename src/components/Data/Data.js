@@ -7,7 +7,7 @@ import Band5 from '../../assets/band5.jpg'
 import Buds from '../../assets/dots.jpg'
 import Watch from '../../assets/watch.jfif'
 
-const productos = [
+export const productos = [
         {
             id: 's21', 
             title: 'Samsung S21', 
@@ -75,5 +75,3 @@ const productos = [
             pictureUrl: Watch
         }
     ]
-
-export default productos

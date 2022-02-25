@@ -1,11 +1,9 @@
 import '../ItemListContainer/ItemListContainer.css'
 import { useEffect } from "react"
 import { useState } from "react"
-import { Link } from "react-router-dom"
-import {Item} from '../Item/Item'
-import data from '../Data/Data'
-
-const productos = data;
+import { ItemList } from '../ItemList/ItemList'
+import {productos} from '../Data/Data'
+ 
 
  export const ItemListContainer = (props) =>{ 
 
@@ -39,8 +37,7 @@ const productos = data;
             <div className="row justify-content-center">
             {
                 products.map(product => 
-                        <Item id={product.id} title={product.title} pictureUrl={product.pictureUrl} 
-                        price={product.price} onAddCard={(e) => console.log(e)}/>
+                        <ItemList key={product.id} productoProp={product}/>
                 )
             }
             </div>

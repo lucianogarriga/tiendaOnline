@@ -1,7 +1,6 @@
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComp from './components/NavBar/NavBar';
-import { Home } from "./components/Home/Home";
+import NavbarComp from './components/NavBar/NavBar'; 
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { ItemDetail } from "./components/ItemDetail/ItemDetail";
@@ -12,10 +11,11 @@ function App() {
     <BrowserRouter>
       <NavbarComp/>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/items/" element={<ItemListContainer/>} />
-        <Route path="/lista-items/:itemName" element={<ItemDetail/>} />
+        <Route path="/" element={<ItemListContainer/>}/>
         <Route path="/items/:id" element={<ItemDetailContainer/>} />
+        <Route path="/category/:id" element={<ItemListContainer/>} />
+        <Route path="/lista-items/:itemName" element={<ItemDetail/>} />
+
       </Routes>
     </BrowserRouter>
   );

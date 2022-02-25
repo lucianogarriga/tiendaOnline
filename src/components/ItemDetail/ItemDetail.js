@@ -1,7 +1,7 @@
 import ItemCount from '../ItemCount/ItemCount'
 import '../ItemListContainer/ItemListContainer.css'
 import { useParams } from 'react-router-dom'
-import data from '../Data/Data'
+import {productos} from '../Data/Data'
 // // import { useState } from 'react'
 // import { useEffect } from 'react'
 
@@ -11,7 +11,7 @@ import data from '../Data/Data'
     // console.log('itemName', itemName);
 
     const proid = useParams();
-    const proDetail = data.filter(x=>x.id == proid.id)
+    const proDetail = productos.filter(x=>x.id == proid.id)
     const product = proDetail[0];
     console.log(product);
 

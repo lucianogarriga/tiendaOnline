@@ -20,7 +20,6 @@ Next steps to follow, is to give functionality to the add to cart buttons, and i
 
 <!-- Proximos pasos a seguir, es dar funcionalidad a los botones de agregar al carrito, y en la ruta del carrito tener las funcionalidades de modificar items, quitar, finalizar la compra etc. -->
 
-
 ## Technologies
 
 * Bootstrap
