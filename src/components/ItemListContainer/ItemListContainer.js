@@ -10,15 +10,6 @@ import {productos} from '../Data/Data'
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState()
 
-    useEffect(() => {
-        setLoading(true)
-        const promise = getItems()
-        promise.then(json => { 
-            setLoading(false)
-            setProducts(json) 
-        })
-    }, [])
-
     const getItems = () => {
 
         const promise = new Promise((resolve, reject) => {
@@ -28,6 +19,15 @@ import {productos} from '../Data/Data'
         })
         return promise
     }
+    
+    useEffect(() => {
+        setLoading(true)
+        const promise = getItems()
+        promise.then(json => { 
+            setLoading(false)
+            setProducts(json) 
+        })
+    }, [])
 
     return(
         <>  

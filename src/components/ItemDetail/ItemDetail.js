@@ -1,19 +1,45 @@
+import React, {useState} from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import '../ItemListContainer/ItemListContainer.css'
 import { useParams } from 'react-router-dom'
-import {productos} from '../Data/Data'
-// // import { useState } from 'react'
-// import { useEffect } from 'react'
+import {productos} from '../Data/Data' 
+import { useCartContext } from '../../Context'
+import { Link } from 'react-router-dom'
 
- export const ItemDetail = (props) =>{
+ export const ItemDetail = (props ) =>{
+ 
+    const [item, setItem] = useState([])
+    const [count, setCount] = useState(0)
+    const {cartItems} = useCartContext();
+    const {cartCount, onAdd} = useCartContext() 
 
-    // const {itemName} = useParams();
-    // console.log('itemName', itemName);
+    const [cart, setCart] = useState([]);
+
+    const itemAdd = (product) =>{
+        setCart([...cart, product]);
+    }
+    const {id} = useParams() 
+
+    const handlerSumar = () =>{
+        setCount(count +1);
+    };
+
+    const handlerRestar = () =>{
+        setCount(count -1);
+    }
 
     const proid = useParams();
     const proDetail = productos.filter(x=>x.id == proid.id)
-    const product = proDetail[0];
-    console.log(product);
+    const product = proDetail[0];  
+
+    //  const handleCart = (product) =>{
+    //      if (btnCart === "Agregar al carrito"){
+    //          setBtnCart("Eliminar del Carrito")
+    //      }
+    //       else {
+    //          setBtnCart("Agregar al carrito")
+    //      }
+    //  }
 
      return(
         <>
@@ -24,10 +50,22 @@ import {productos} from '../Data/Data'
                 </div>
                 <div className='col-md-6' style={{marginTop: '1rem', marginBottom: '1.5rem'}}>
                     <h5 className="card-title">{product.title}</h5>
-                    <p>Detalle del Producto: {product.description}</p>
+                    <p>Descripcion:<br/> {product.description}</p>
                     <h3>Precio: ${product.price}</h3>
-                    <p>Stock: {product.stock}</p>
-                    <ItemCount stock={product.stock} initial={1} />
+                    {/* <p>Stock: {product.stock}</p> */}
+                    <ItemCount 
+                    stock={product.stock}   
+                    count={count}
+                    sub={handlerRestar}
+                    add={handlerSumar}
+                    initial={1}  
+                    />
+                    <button className="btn btn-primary" 
+                    onClick={()=>onAdd(item,count)}> 
+                    Comprar
+                   </button>
+                    <br/>
+                    <Link className='btn btn-primary' to="/cart">Ir al Carrito ({cartItems.length})</Link> 
                 </div>
             </div>
             </div>
