@@ -65,7 +65,7 @@ import { Link } from 'react-router-dom'
                     Comprar
                    </button>
                     <br/>
-                    <Link className='btn btn-primary' to="/cart">Ir al Carrito ({cartItems.length})</Link> 
+                    <Link className='btn btn-primary' style={{marginTop:'1rem'}} to="/cart">Ir al Carrito</Link> 
                 </div>
             </div>
             </div>

@@ -14,10 +14,10 @@ export const Cart = ({items = [] }) => {
         cartItems.map((i) => {
           return (
             <>
-              <p>
+              <p style={{margin:'1rem 1rem'}}>
                 {i.item} x {i.amount}
               </p>
-              <button className="btn btn-danger">
+              <button className="btn btn-danger" style={{marginLeft:'1rem'}}>
                 Eliminar
               </button>
             </>
