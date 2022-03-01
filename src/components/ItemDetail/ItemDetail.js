@@ -9,17 +9,9 @@ import { Link } from 'react-router-dom'
  export const ItemDetail = (props ) =>{
  
     const [item, setItem] = useState([])
-    const [count, setCount] = useState(0)
-    const {cartItems} = useCartContext();
+    const [count, setCount] = useState(0) 
     const {cartCount, onAdd} = useCartContext() 
-
-    const [cart, setCart] = useState([]);
-
-    const itemAdd = (product) =>{
-        setCart([...cart, product]);
-    }
-    const {id} = useParams() 
-
+   
     const handlerSumar = () =>{
         setCount(count +1);
     };
