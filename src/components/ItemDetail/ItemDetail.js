@@ -41,7 +41,7 @@ import { Link } from 'react-router-dom'
                     <img className="card-img-top" src={product.pictureUrl} alt="Imagen"></img> 
                 </div>
                 <div className='col-md-6' style={{marginTop: '1rem', marginBottom: '1.5rem'}}>
-                    <h5 className="card-title">{product.title}</h5>
+                    <h1 className="card-title">{product.title}</h1>
                     <p>Descripcion:<br/> {product.description}</p>
                     <h3>Precio: ${product.price}</h3>
                     {/* <p>Stock: {product.stock}</p> */}

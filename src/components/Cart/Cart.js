@@ -1,5 +1,6 @@
 import React from 'react' 
 import { useCartContext } from '../../Context';
+import { Link } from 'react-router-dom';
 
 export const Cart = ({items = [] }) => {
     
@@ -9,8 +10,13 @@ export const Cart = ({items = [] }) => {
   return (
    <>
       {cartItems.length === 0 ? (
-        <h4 style={{textAlign: 'center', padding: '1rem'}}>Carrito vacio</h4>
-      ) : (
+         <div className='container'>
+         <div className='row' style={{textAlign:'justify'}}>
+             <div className='col-md-6' style={{marginTop: '1rem'}}> <h4 style={{textAlign: 'center', padding: '1rem'}}>Carrito vacio</h4>
+           </div>
+           <div className='col-md-6' style={{marginTop: '1rem'}}>
+        <Link className='btn btn-primary' style={{marginTop:'1rem', alignContent:'center'}} to="/">Ir al Listado de Productos</Link></div></div></div>
+        ) : (
         cartItems.map((i) => {
           return (
             <>

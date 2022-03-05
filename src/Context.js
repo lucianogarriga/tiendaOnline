@@ -1,5 +1,5 @@
 import React from 'react'
-import { createContext, useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import {ItemList} from './components/ItemList/ItemList'
 
 export const CartContext = React.createContext()
@@ -12,9 +12,24 @@ export const CartProvider = ({children}) => {
   const [cartCount, setCartCount] = useState(0)
 
   const onAdd = (item, amount) => {
-      setCartItems([...cartItems, {...item, amount}])
-      setCartCount(prev => prev+amount)
-  }
+    if (cartItems.some((product) => product.id === item.id)) {
+      const copy = [...cartItems];
+      const repeatItemIndex = cartItems.findIndex(
+        (product) => product.id === item.id
+      );
+      copy[repeatItemIndex] = {
+        ...copy[repeatItemIndex],
+        amount: copy[repeatItemIndex].amount + amount,
+      };
+
+      setCartItems(copy);
+      setCartCount((prev) => prev + amount);
+       
+    } else {
+      setCartItems([...cartItems, { ...item, amount }]);
+      setCartCount((prev) => prev + amount); 
+    }
+  };
 
   return (
     <CartContext.Provider value={{cartCount, cartItems, onAdd}}>{children}
