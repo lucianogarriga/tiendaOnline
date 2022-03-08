@@ -18,8 +18,9 @@ const NavbarComp = () =>{
                 <Navbar.Collapse>
                     <Nav style={{alignItems:'center'}}> 
                         <Link style={{textDecoration:'none', color:'white', fontSize:20, padding:5}} to="/">Home</Link>
-                        <Link style={{textDecoration:'none', color:'white', fontSize:20, padding:5}} to="/category/celulares">Celulares</Link>
-                        <Link style={{textDecoration:'none', color:'white', fontSize:20, padding:5}} to="/category/accesorios">Accesorios</Link> 
+                        <Link style={{textDecoration:'none', color:'white', fontSize:20, padding:5}} to="/category/MLA1051/Celulares y Teléfonos">Celulares y Teléfonos</Link>
+                        <Link style={{textDecoration:'none', color:'white', fontSize:20, padding:5}} to="/category/MLA1648/Computación">Computación</Link> 
+                        <Link style={{textDecoration:'none', color:'white', fontSize:20, padding:5}} to="/category/MLA1144/Consolas y Videojuegos">Consolas y Videojuegos</Link> 
                         <Link style={{textDecoration:'none', color:'white', fontSize:20, padding:5}}to="/cart">Carrito</Link>
                     </Nav>
                 </Navbar.Collapse>

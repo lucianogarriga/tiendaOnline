@@ -1,47 +1,47 @@
 import '../ItemListContainer/ItemListContainer.css'
-import { useEffect } from "react"
-import { useState } from "react"
-import { ItemList } from '../ItemList/ItemList'
-import {productos} from '../Data/Data'
+import React from 'react'
+import { useState, useEffect } from 'react'
+import { ItemList } from '../ItemList/ItemList' 
  
+export const ItemListContainer = ({categoryId, categoryName }) =>{
 
- export const ItemListContainer = (props) =>{ 
+    const [items, setItems] = useState([]) 
+    const [loading, setLoading] = useState(false)
 
-    const [products, setProducts] = useState([])
-    const [loading, setLoading] = useState()
-
-    const getItems = () => {
-
-        const promise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productos)
-            }, 1000)
-        })
-        return promise
-    }
-    
-    useEffect(() => {
+     useEffect(()=> {
         setLoading(true)
-        const promise = getItems()
-        promise.then(json => { 
-            setLoading(false)
-            setProducts(json) 
-        })
-    }, [])
+        setTimeout(()=>{
+            fetch (`https://api.mercadolibre.com/sites/MLA/search?category=${categoryId}&limit=4`)
+                .then(response=> response.json())
+                .then(respJSON => {console.log(respJSON.results); setItems(respJSON.results); setLoading(false)})
+                .catch(error => console.log("Error", error))
+        }, 2000)
+    }, [categoryId])
 
+    
     return(
         <>  
         <div style={{textAlign: 'center'}}>
-            <h1 style={{margin: 15}}>Bienvenido a la tienda oficial REPLACE</h1>
-        {loading && <h5 style={{margin:"1rem", padding:"10px"}}>Cargando lista de productos</h5>}
-            <div className="row justify-content-center">
-            {
-                products.map(product => 
-                        <ItemList key={product.id} productoProp={product}/>
-                )
-            }
-            </div>
-            </div>  
+           <h3 style={{margin: '1rem', padding: '2px'}}>{categoryName}</h3>
+             
+                {
+                loading ? (
+                    <p>Cargando...</p>
+                ) : (
+                    <div className='row justify-content-center'>
+                     {items.map(item=>(
+                        <ItemList 
+                            key={item.id}
+                            title={item.title}
+                            price={item.price}
+                            thumbnail={item.thumbnail}
+                            id={item.id}
+                        />
+                    ))}
+                    </div>
+                )}
+             
+        </div>
         </>
     )
 }
