@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import '../ItemListContainer/ItemListContainer.css'  
-import { useParams } from 'react-router-dom'
-import ItemCount from '../ItemCount/ItemCount'
+import { useParams } from 'react-router-dom' 
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 
  export const ItemDetailContainer = () => {

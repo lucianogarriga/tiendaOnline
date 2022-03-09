@@ -1,5 +1,6 @@
-import React, { useState }  from 'react' 
+import React, { useState, useContext }  from 'react' 
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../Context'
 import ItemCount from '../ItemCount/ItemCount'
 import '../ItemListContainer/ItemListContainer.css'  
 
@@ -7,9 +8,7 @@ import '../ItemListContainer/ItemListContainer.css'
 
     const [add, setAdd] = useState(false)
 
-    const onAdd = ( ) =>{
-        setAdd(!add)
-    }
+    const {addItem} = useContext(CartContext)
   
      return(
         <>
@@ -26,7 +25,7 @@ import '../ItemListContainer/ItemListContainer.css'
                            add  ?
                                 <div>Añadido!</div>
                                 :
-                                <ItemCount stock={5} initial={0} onAdd={onAdd}/>   
+                                <ItemCount item={item} stock={5} initial={0} addItem={addItem}/>   
                        }
                         
                         <Link to="/cart" style={{margin:'10px'}} type="button" className="btn btn-outline-primary">

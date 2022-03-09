@@ -6,12 +6,17 @@ import { CartContext } from '../../Context';
 
 export const CartWidget = () =>{
 
-    const {cartCount} = useContext(CartContext)
+    const {items} = useContext(CartContext)
+    let itemsInCart = 0;
+
+    items.map((item)=>{
+        itemsInCart = itemsInCart+item.count;
+    })
 
     return(
         <div>
             <img src={cart} width="30px" alt="logo"></img>
-            <span className='spancart'>{cartCount}</span>
+            <span className='spancart'>{itemsInCart}</span>
         </div>
     )
 }
