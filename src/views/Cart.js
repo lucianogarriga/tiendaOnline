@@ -7,52 +7,48 @@ export const Cart = () => {
 
   return (
     <>
-    <div className='container'>  
-        <h1 style={{margin:'1rem', textAlign:'center'}}>Carrito</h1><hr/>
+    <div className='container'>      
+    <h4 style={{marginTop:'1.5rem'}} className="mb-0">Carrito de compras</h4><hr/>
         {
           items.length > 0 
               ? (
                   <div>
+                    <div className="d-flex justify-content-between"><h5 style={{margin:'10px'}}>Tienes {items.length} items en el carrito</h5>
+                    </div>
                     {
                       items.map((item)=>(
                         <>
-                        <div style={{textAlign:'center', margin:'1rem'}}>
-                          <h5>{item.title}</h5>
-                          <p>{item.count} x ${item.price}</p>
-                          <button className='btn btn-outline-danger' onClick={()=> removeItem(item.id)}>Eliminar</button>
-                          <div>
-                              <button className='btn btn-danger' onClick={()=> clearItems()} style={{alignContent:'right',marginTop:'3rem'}} >Vaciar carrito</button>
+
+                          <div className="col-md-11">
+                              <div className="product-details mr-2">
+                                  
+                                  <div className="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                                      <div className="d-flex flex-row"><img className="rounded" src={item.thumbnail} width="120"/>
+                                          <div className="ml-2"><span className="font-weight-bold d-block">{item.title}</span>
+                                          </div>
+                                      </div>
+                                      <div className="d-flex flex-row align-items-center"><span className="d-block">{item.count}x</span><span style={{margin:'20px'}} className="d-block ml-5 font-weight-bold">${item.price}</span><button className='btn btn-outline-danger' onClick={()=> removeItem(item.id)}>Eliminar</button>
+                                      </div>
+                                  </div> 
+                              </div>
                           </div>
-                        </div>
+                          
                         </>
                       ))
                     }
+                    <div style={{textAlign:'center', marginBottom:'3rem'}}>
+                      <button className='btn btn-danger' onClick={()=> clearItems()} style={{alignContent:'right',marginTop:'3rem'}} >Vaciar carrito</button>
+                    </div>
                   </div>
                   )
-
               : <>
-                  <div style={{textAlign:'center', marginTop:'1.5rem'}}>
+                  <div style={{textAlign:'center', marginTop:'1rem'}}>
                   <h4>No has agregado productos</h4>
-                    <Link to="/" style={{margin:'1.5rem'}} type="button" className="btn btn-outline-primary">Ir a productos</Link>
+                    <Link to="/" style={{margin:'1rem'}} type="button" className="btn btn-outline-primary">Ir a productos</Link>
                   </div>
                 </>
            
         } 
-
-            {/* // items.map((item)=>(
-            //    <>
-            //       <div key="item.id" style={{border:'5px'}}>
-            //             <img style={{width:'15%', marginTop: '1rem'}} src={item.thumbnail} /> 
-                      
-            //             <h5>{item.title}</h5>
-            //             <p>{item.count} x ${item.price}</p>
-            //             <button className='btn btn-outline-danger' onClick={()=> removeItem(item.id)}>Eliminar</button>
-            //       </div>
-                  
-            //     </>
-            // )) */}
-
-        
     </div>
     </>
   )
