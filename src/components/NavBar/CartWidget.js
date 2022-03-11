@@ -15,7 +15,7 @@ export const CartWidget = () =>{
 
     return(
         <div>
-            <img src={cart} width="30px" alt="logo"></img>
+            <img src={cart} width="45px" alt="logo"></img>
             <span className='spancart'>{itemsInCart}</span>
         </div>
     )

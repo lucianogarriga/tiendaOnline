@@ -11,7 +11,7 @@ const NavbarComp = () =>{
             <Navbar bg="dark" variant="dark"
             sticky='top' expand='lg'>
                 <Navbar.Brand>
-                    <img src={ReplaceImg} className="ReplaceImg"/>
+                    <img src={ReplaceImg} style={{height: '70px', width:'150px'}} className="ReplaceImg"/>
                 </Navbar.Brand>
                 <CartWidget/>
                 <Navbar.Toggle />

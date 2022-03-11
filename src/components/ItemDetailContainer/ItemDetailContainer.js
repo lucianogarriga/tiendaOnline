@@ -15,7 +15,7 @@ import { ItemDetail } from '../ItemDetail/ItemDetail'
                 .then((response) => response.json())
                 .then(respJSON => {console.log(respJSON); setItem(respJSON); setLoading(false)})
                 .catch(error=> console.log("Error: ", error))
-        }, 1000)
+        }, 500)
     }, [params.id])
 
       

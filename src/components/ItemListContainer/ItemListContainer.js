@@ -15,7 +15,7 @@ export const ItemListContainer = ({categoryId, categoryName }) =>{
                 .then(response=> response.json())
                 .then(respJSON => {console.log(respJSON.results); setItems(respJSON.results); setLoading(false)})
                 .catch(error => console.log("Error", error))
-        }, 2000)
+        }, 800)
     }, [categoryId])
 
     
