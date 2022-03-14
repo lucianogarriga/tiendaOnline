@@ -23,21 +23,23 @@ export const Cart = () => {
                               <div className="product-details mr-2">
                                   
                                   <div className="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
-                                      <div className="d-flex flex-row"><img className="rounded" src={item.thumbnail} width="120"/>
-                                          <div className="ml-2"><span className="font-weight-bold d-block">{item.title}</span>
+                                      <div className="d-flex flex-row"><img src={item.thumbnail} width="120"/>
+                                          <div className="m-5"><span className="font-weight-bold d-block">{item.title}</span>
                                           </div>
                                       </div>
-                                      <div className="d-flex flex-row align-items-center"><span className="d-block">{item.count}x</span><span style={{margin:'20px'}} className="d-block ml-5 font-weight-bold">${item.price}</span><button className='btn btn-outline-danger' onClick={()=> removeItem(item.id)}>Eliminar</button>
+                                      <div className="d-flex flex-row m-1 align-items-center"><span className="d-block">{item.count}x</span><span style={{margin:'20px'}} className="d-block ml-5 font-weight-bold">${item.price}</span><button className='btn btn-outline-danger' onClick={()=> removeItem(item.id)}>Eliminar</button>
                                       </div>
                                   </div> 
+                                  <hr/>
                               </div>
                           </div>
-                          
                         </>
                       ))
                     }
                     <div style={{textAlign:'center', marginBottom:'3rem'}}>
-                      <button className='btn btn-danger' onClick={()=> clearItems()} style={{alignContent:'right',marginTop:'3rem'}} >Vaciar carrito</button>
+                      <div className="d-flex mt-3 justify-content-between"><h5 style={{margin:'10px'}}>{`Total: $ ${items.reduce((acum, item) => acum + (item.price * item.count),0)}`}</h5>
+                      </div> 
+                      <button className='btn btn-danger mt-2' onClick={()=> clearItems()} >Vaciar carrito</button>
                     </div>
                   </div>
                   )

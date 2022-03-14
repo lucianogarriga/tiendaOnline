@@ -8,10 +8,8 @@ import { CartProvider } from "./Context";
 import { Home } from "./views/Home";
 import { Category } from "./views/Category";
  
-
 function App() {
    
-
   return (
     <>
     <CartProvider>
