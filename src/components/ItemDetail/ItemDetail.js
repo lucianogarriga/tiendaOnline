@@ -18,8 +18,7 @@ import '../ItemListContainer/ItemListContainer.css'
                     <img className="card-img-top" src={item.imageUrl} /> 
                 </div>
                 <div className='col-md-6' style={{textAlign:'center', marginBottom:'1rem'}}>
-                    <h2 className="card-title m-3">{item.title}</h2>      
-                    <p> {item.warranty}</p>
+                    <h2 className="card-title m-3">{item.title}</h2>       
                     <h3 className='m-3'>Precio: ${item.price}</h3>
                        {
                            add  ?

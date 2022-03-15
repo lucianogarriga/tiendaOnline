@@ -32,18 +32,18 @@ export const Cart = () => {
                                                 <div className="col-md-8" >
                                                   <div className="info" >
                                                     <div className="row" >
-                                                      <div className="col-md-5" >
+                                                      <div className="col-md-5 mb-2 mt-2" >
                                                         <h5>
                                                           {item.title}
                                                         </h5>
                                                       </div>
-                                                      <div className="col-md-3 mb-2">
+                                                      <div className="col-md-3 mt-2">
                                                         <span>Cantidad: </span>
-                                                        <p className='bold'> {item.count} </p>
+                                                        <span className='bold'> {item.count} </span>
                                                         <span>unidades</span>
                                                       </div>
-                                                      <div className="col-md-4 mb-2">
-                                                        <h5 className="mb-3">${item.price}</h5>
+                                                      <div className="col-md-4 mt-2">
+                                                        <h5 className="mb-3 mt-2">${item.price}</h5>
                                                         <button className='btn btn-outline-danger' onClick={()=> removeItem(item.id)}>Eliminar</button>
                                                       </div>
                                                     </div>
