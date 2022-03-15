@@ -36,16 +36,16 @@ export const ItemListContainer = () =>{
     }
 
     useEffect(()=>{
-        categoryId ?getDataCategory() : getData()
+        categoryId ?
+            getDataCategory() :
+            getData()
     }, [categoryId])
 
     console.log('productos: ', productos);
 
     return(
         <>  
-        <div style={{textAlign: 'center'}}>
-           <h3 style={{margin: '1rem', padding: '2px'}}>PROBANDO FIREBASE</h3>
-             
+        <div style={{textAlign: 'center'}}>             
            <div className="container">
                 <div className="row">
                         <ItemList items={productos}/>

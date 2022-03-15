@@ -17,61 +17,45 @@ export const Cart = () => {
                     </div>
                     
                     <div className="content">
-                            <div className="row">
-                              <div className="col-md-12 col-lg-8">
-                                <div className="items">
-                                  
+                            <div className="row"> 
+                                <div className="items"> 
                                       {
                                         items.map((item)=>(
                                           
                                           <>
-                                          <div className="product">
-                                            <div className="row">
-                                              <div className="col-md-3">
-                                                <img className="img-fluid mx-auto d-block image" width={'200px'} src={item.imageUrl}/>
-                                              </div>
-                                              <div className="col-md-8" >
-                                                <div className="info" >
-                                                  <div className="row" >
-                                                    <div className="col-md-5 mb-2 product-name" >
-                                                      <h5>
-                                                        {item.title}
-                                                      </h5>
-                                                    </div>
-                                                    <div className="col-md-4 mb-2 quantity">
-                                                      <label for="quantity">Cantidad x </label>
-                                                      {item.count}
-                                                    </div>
-                                                    <div className="col-md-3 mb-2 price">
-                                                      <h5>${item.price}</h5>
-                                                      <button className='btn btn-outline-danger' onClick={()=> removeItem(item.id)}>Eliminar</button>
+                                            <div className="product">
+                                              <div className="row">
+                                                <div className="col-md-3">
+                                                  <img className="img-fluid mx-auto d-block image" width={'200px'} src={item.imageUrl}/>
+                                                </div>
+                                                <div className="col-md-8" >
+                                                  <div className="info" >
+                                                    <div className="row" >
+                                                      <div className="col-md-5 mb-2 product-name" >
+                                                        <h5>
+                                                          {item.title}
+                                                        </h5>
+                                                      </div>
+                                                      <div className="col-md-4 mb-2 quantity">
+                                                        <label for="quantity">Cantidad x </label>
+                                                        {item.count}
+                                                      </div>
+                                                      <div className="col-md-3 mb-2 price">
+                                                        <h5>${item.price}</h5>
+                                                        <button className='btn btn-outline-danger' onClick={()=> removeItem(item.id)}>Eliminar</button>
+                                                      </div>
                                                     </div>
                                                   </div>
                                                 </div>
-                                              </div>
 
-                                            </div>
-                                          </div>
-                                            {/* <div className="col-md-11">
-                                                <div className="product-details mr-2">
-                                                    
-                                                    <div className="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
-                                                        <div className="d-flex flex-row"><img src={item.imageUrl} width="120"/>
-                                                            <div className="m-5"><span className="font-weight-bold d-block">{item.title}</span>
-                                                            </div>
-                                                        </div>
-                                                        <div className="d-flex flex-row m-1 align-items-center"><span className="d-block">{item.count}x</span><span style={{margin:'20px'}} className="d-block ml-5 font-weight-bold">${item.price}</span><button className='btn btn-outline-danger' onClick={()=> removeItem(item.id)}>Eliminar</button>
-                                                        </div>
-                                                    </div> 
-                                                    <hr/>
-                                                </div>
-                                            </div> */}
+                                              </div>
+                                            </div> 
+                                            <hr/>
                                           </>
                                         ))
                                       }
                                 </div>
-                              </div>
-                            </div>
+                              </div> 
                           </div>
                     <div style={{textAlign:'center', marginBottom:'3rem'}}>
                       <div className="d-flex mt-3 justify-content-between"><h5 style={{margin:'10px'}}>{`Total: $ ${items.reduce((acum, item) => acum + (item.price * item.count),0)}`}</h5>

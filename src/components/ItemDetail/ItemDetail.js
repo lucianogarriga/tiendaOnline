@@ -27,7 +27,7 @@ import '../ItemListContainer/ItemListContainer.css'
                                 :
                                 <ItemCount item={item} stock={5} initial={0} addItem={addItem}/>   
                        }
-                        
+                        <br/>
                         <Link to="/cart" style={{margin:'10px'}} type="button" className="btn btn-outline-primary">
                             Finalizar compra
                         </Link>
