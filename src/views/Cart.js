@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import { Link } from 'react-router-dom';
-import { CartContext } from '../Context';
+import { CartContext } from '../Context'; 
+import './Cart.css'
 
 export const Cart = () => {
     const {items, removeItem, clearItems} = useContext(CartContext);
@@ -23,7 +24,7 @@ export const Cart = () => {
                                         items.map((item)=>(
                                           
                                           <>
-                                            <div className="product">
+                                            <div className="product" style={{textAlign:'center' }}>
                                               <div className="row">
                                                 <div className="col-md-3">
                                                   <img className="img-fluid mx-auto d-block image" width={'200px'} src={item.imageUrl}/>
@@ -31,23 +32,23 @@ export const Cart = () => {
                                                 <div className="col-md-8" >
                                                   <div className="info" >
                                                     <div className="row" >
-                                                      <div className="col-md-5 mb-2 product-name" >
+                                                      <div className="col-md-5" >
                                                         <h5>
                                                           {item.title}
                                                         </h5>
                                                       </div>
-                                                      <div className="col-md-4 mb-2 quantity">
-                                                        <label for="quantity">Cantidad x </label>
-                                                        {item.count}
+                                                      <div className="col-md-3 mb-2">
+                                                        <span>Cantidad: </span>
+                                                        <p className='bold'> {item.count} </p>
+                                                        <span>unidades</span>
                                                       </div>
-                                                      <div className="col-md-3 mb-2 price">
-                                                        <h5>${item.price}</h5>
+                                                      <div className="col-md-4 mb-2">
+                                                        <h5 className="mb-3">${item.price}</h5>
                                                         <button className='btn btn-outline-danger' onClick={()=> removeItem(item.id)}>Eliminar</button>
                                                       </div>
                                                     </div>
                                                   </div>
                                                 </div>
-
                                               </div>
                                             </div> 
                                             <hr/>
@@ -57,8 +58,9 @@ export const Cart = () => {
                                 </div>
                               </div> 
                           </div>
-                    <div style={{textAlign:'center', marginBottom:'3rem'}}>
-                      <div className="d-flex mt-3 justify-content-between"><h5 style={{margin:'10px'}}>{`Total: $ ${items.reduce((acum, item) => acum + (item.price * item.count),0)}`}</h5>
+                    <div style={{textAlign:'center', marginBottom:'1rem'}}>
+                      <div className="d-flex mt-1">
+                        <h5 style={{margin:'10px'}}>{`Total: $ ${items.reduce((acum, item) => acum + (item.price * item.count),0)}`}</h5>
                       </div> 
                       <button className='btn btn-danger mt-2' onClick={()=> clearItems()} >Vaciar carrito</button>
                     </div>

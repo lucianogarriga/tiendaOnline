@@ -17,10 +17,10 @@ import '../ItemListContainer/ItemListContainer.css'
                 <div className='col-md-6' style={{marginTop: '1rem'}}> 
                     <img className="card-img-top" src={item.imageUrl} /> 
                 </div>
-                <div className='col-md-6' style={{marginTop: '1rem', marginBottom: '1.5rem'}}>
-                    <h2 className="card-title">{item.title}</h2>      
+                <div className='col-md-6' style={{textAlign:'center', marginBottom:'1rem'}}>
+                    <h2 className="card-title m-3">{item.title}</h2>      
                     <p> {item.warranty}</p>
-                    <h3>Precio: ${item.price}</h3>
+                    <h3 className='m-3'>Precio: ${item.price}</h3>
                        {
                            add  ?
                                 <div>Añadido!</div>
