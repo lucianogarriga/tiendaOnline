@@ -15,7 +15,7 @@ import '../ItemListContainer/ItemListContainer.css'
             <div className='container'>
             <div className='row' style={{textAlign:'justify', margin:'2rem'}}>
                 <div className='col-md-6' style={{marginTop: '1rem'}}> 
-                    <img className="card-img-top" src={item.thumbnail} /> 
+                    <img className="card-img-top" src={item.imageUrl} /> 
                 </div>
                 <div className='col-md-6' style={{marginTop: '1rem', marginBottom: '1.5rem'}}>
                     <h2 className="card-title">{item.title}</h2>      

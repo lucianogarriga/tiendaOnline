@@ -1,12 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export const Item = ( ) =>{
+export const Item = ({item} ) =>{
 
     return(
-        <div key={id} className="card" style={{width:'18rem', margin:'15px', padding:'2px'}}>
-             <h1>Item</h1>
+        <div  className="card" style={{width:'18rem', margin:'10px', padding:'2px'}}>
+            <img className="card-img-top" src={item.imageUrl} style={{width: 280}} alt="Imagen"></img>
+
+            <div className="card-body">
+                <h5 className="card-title">{item.title}</h5>
+                <p> ${item.price}</p>
+                <Link to={`/item/${item.id}`}>
+                    <button className="btn btn-primary"> Ver mas </button>
+                </Link>
+            </div>
         </div>
     )
 }
-
-// NO LO TOMA A ESTE COMPONENTE

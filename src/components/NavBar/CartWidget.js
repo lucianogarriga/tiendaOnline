@@ -15,8 +15,14 @@ export const CartWidget = () =>{
 
     return(
         <div>
+            {items !==0
+            ?
+             <>
             <img src={cart} width="45px" alt="logo"></img>
             <span className='spancart'>{itemsInCart}</span>
+             </>
+            : ''
+            }   
         </div>
     )
 }
