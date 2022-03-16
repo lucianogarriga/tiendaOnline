@@ -32,7 +32,7 @@ export const Cart = () => {
                                                 <div className="col-md-8" >
                                                   <div className="info" >
                                                     <div className="row" >
-                                                      <div className="col-md-5 mb-2 mt-2" >
+                                                      <div className="col-md-5 mt-2" >
                                                         <h5>
                                                           {item.title}
                                                         </h5>
