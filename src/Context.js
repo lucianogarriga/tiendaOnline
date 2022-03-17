@@ -1,3 +1,4 @@
+import { collection } from 'firebase/firestore'
 import React, { createContext, useState } from 'react'
  
 export const CartContext = createContext([])
@@ -34,6 +35,18 @@ export const CartProvider = ({children}) => {
   const clearItems = () =>{
     setItems([])
   }
+
+  // const getData = async () => {
+  //   try {
+  //     const itemsCollection = collection (db, 'items')
+  //     const col = await getDocs (itemsCollection)
+  //     const result  = col.docs.map((doc) => doc = {id: doc.id, ...doc.data()})
+  //     setItems(result)
+  //   }
+  //   catch (error) {
+  //     console.log('error', error);
+  //   }
+  // }
 
   return (
     <CartContext.Provider value={{items, addItem, removeItem, clearItems}}>
