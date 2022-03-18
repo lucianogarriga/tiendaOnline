@@ -10,7 +10,7 @@ export const Cart = () => {
   const { items, removeItem, clearItems } = useContext(CartContext);
 
   const sendOrder = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     let order = {
       buyer: {
         name: e.target[0].value,
@@ -21,7 +21,7 @@ export const Cart = () => {
       total: items.reduce((ac, productos) => ac + (productos.price * productos.count), 0)
     }
     order.date = Timestamp.fromDate(new Date());
-    const queryCollection = collection(db,'orders');
+    const queryCollection = collection(db, 'orders');
     console.log('order', order);
     try {
       const docRef = await addDoc(queryCollection, order);
@@ -31,13 +31,13 @@ export const Cart = () => {
     }
   }
 
-  const updateOrder = async () =>{
+  const updateOrder = async () => {
     const queryDoc = doc(db, 'orders', 'WhlyidyItxhkw2DENVXx');
     await updateDoc(queryDoc, {
-      buyer:{
+      buyer: {
         name: '',
-        phone:'',
-        email:'',
+        phone: '',
+        email: '',
       }
     })
   }
@@ -100,19 +100,36 @@ export const Cart = () => {
                 </div>
                 <div className="d-flex m-3 pt-3">
                   <h5>{`Total: $ ${items.reduce((acum, item) => acum + (item.price * item.count), 0)}`}</h5>
-                </div>
-                <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+                </div> 
+                <hr/>
                   <form onSubmit={sendOrder}>
-                    <input className='m-1' type='text' placeholder='Nombre'></input> <br />
+                  <div className="mb-3 mt-4">
+                      <label>Nombre</label>
+                      <input type="text" className="form-control"/>
+                    </div> 
+                    
+                    <div className="mb-3">
+                      <label>Telefono</label>
+                      <input type="number" className="form-control"/>
+                    </div> 
+                    <div className="mb-3">
+                      <label>Email </label>
+                      <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                        <div id="emailHelp" className="form-text">Nunca vamos a compartir tus datos personales</div>
+                    </div>
+                    <div style={{textAlign:'center', padding:'10px'}}>
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                    </div>
+                    {/* <input className='m-1' type='text' placeholder='Nombre'></input> <br />
                     <input className='m-1' type='number' placeholder='Telefono'></input> <br />
                     <input className='m-1' type='mail' placeholder='E-mail'></input> <br />
-                    <button className='m-3 btn btn-success' type='submit'>Enviar</button>
+                    <button className='m-3 btn btn-success' type='submit'>Enviar</button> */}
                   </form>
-                  <hr/>
-                  <button className='m-2 btn btn-outline-success' onClick={updateOrder}>Actualizar orden</button>
-                </div>
-              </div>
-
+                  <hr />
+                  <div style={{textAlign:'center',  padding:'10px'}}>
+                  <button className='m-2 btn btn-outline-primary' onClick={updateOrder}>Actualizar orden</button>
+                  </div>
+                </div> 
             )
             : <>
               <div style={{ textAlign: 'center', marginTop: '1rem' }}>

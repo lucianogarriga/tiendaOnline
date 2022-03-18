@@ -17,9 +17,6 @@ const ItemCount = ({item, stock, initial, addItem}) =>{
           setCount(count-1);
           }
       }
-     
-      
-   
 
     return(
        <>
@@ -38,14 +35,6 @@ const ItemCount = ({item, stock, initial, addItem}) =>{
                    Añadir al Carrito
                 </button>
             }
-
-
-
-                {/* <p>Cantidad: {count}</p>
-                <button className="btn btn-danger" style={{margin:"5px"}} onClick={restar} >-</button>
-                <button className="btn btn-primary" >Comprar</button>
-                <button className="btn btn-success" style={{margin:"5px"}} onClick={sumar}>+</button> */}
-          
         </>
     )
 }
