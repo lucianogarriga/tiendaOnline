@@ -1,5 +1,5 @@
 import { async } from '@firebase/util';
-import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import { collection, doc, addDoc, Timestamp, updateDoc } from 'firebase/firestore';
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { CartContext } from '../Context';
@@ -30,6 +30,18 @@ export const Cart = () => {
       console.log('Error: ', error);
     }
   }
+
+  const updateOrder = async () =>{
+    const queryDoc = doc(db, 'orders', 'WhlyidyItxhkw2DENVXx');
+    await updateDoc(queryDoc, {
+      buyer:{
+        name: '',
+        phone:'',
+        email:'',
+      }
+    })
+  }
+
 
   return (
     <>
@@ -96,6 +108,8 @@ export const Cart = () => {
                     <input className='m-1' type='mail' placeholder='E-mail'></input> <br />
                     <button className='m-3 btn btn-success' type='submit'>Enviar</button>
                   </form>
+                  <hr/>
+                  <button className='m-2 btn btn-outline-success' onClick={updateOrder}>Actualizar orden</button>
                 </div>
               </div>
 
