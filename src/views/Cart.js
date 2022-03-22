@@ -31,16 +31,16 @@ export const Cart = () => {
     }
   }
 
-  const updateOrder = async () => {
-    const queryDoc = doc(db, 'orders', 'WhlyidyItxhkw2DENVXx');
-    await updateDoc(queryDoc, {
-      buyer: {
-        name: '',
-        phone: '',
-        email: '',
-      }
-    })
-  }
+  // const updateOrder = async () => {
+  //   const queryDoc = doc(db, 'orders', 'WhlyidyItxhkw2DENVXx');
+  //   await updateDoc(queryDoc, {
+  //     buyer: {
+  //       name: '',
+  //       phone: '',
+  //       email: '',
+  //     }
+  //   })
+  // }
 
 
   return (
@@ -118,7 +118,7 @@ export const Cart = () => {
                         <div id="emailHelp" className="form-text">Nunca vamos a compartir tus datos personales</div>
                     </div>
                     <div style={{textAlign:'center', padding:'10px'}}>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary">Confirmar Compra</button>
                     </div>
                     {/* <input className='m-1' type='text' placeholder='Nombre'></input> <br />
                     <input className='m-1' type='number' placeholder='Telefono'></input> <br />
@@ -126,9 +126,9 @@ export const Cart = () => {
                     <button className='m-3 btn btn-success' type='submit'>Enviar</button> */}
                   </form>
                   <hr />
-                  <div style={{textAlign:'center',  padding:'10px'}}>
+                  {/* <div style={{textAlign:'center',  padding:'10px'}}>
                   <button className='m-2 btn btn-outline-primary' onClick={updateOrder}>Actualizar orden</button>
-                  </div>
+                  </div> */}
                 </div> 
             )
             : <>
