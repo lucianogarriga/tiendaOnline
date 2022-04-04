@@ -7,6 +7,7 @@ import { Cart } from "./views/Cart";
 import { CartProvider } from "./Context";
 import { Home } from "./views/Home";
 import { Category } from "./views/Category";
+import Footer from './components/Footer/Footer'
  
 function App() {
    
@@ -22,6 +23,7 @@ function App() {
         <Route path="/cart" element={<Cart />}/>
         <Route path="/contexto" element={<CartProvider/>} />
       </Routes>
+    <Footer/>
     </BrowserRouter>
     </CartProvider>
     </>
