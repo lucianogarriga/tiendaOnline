@@ -30,7 +30,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     return (
         <>
             <div>
-                <span>Stock: {stockItems}</span>
+                <h5 style={{margin:'1rem'}}>Stock: {stockItems}</h5>
                 {stockItems > 0 ?
 
                     <div className="ui three buttons">
@@ -44,12 +44,13 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                             </button>
                             :
                             <div>
-                                <button style={{ margin: '10px' }} type="button" className="btn btn-outline-primary" onClick={addToCart}>
-                                    Añadir al Carrito
-                                </button>
-                                <Link to="/cart" style={{ margin: '10px' }} type="button" className="btn btn-outline-primary">
+                                <Link to="/cart" style={{ margin: '10px' }} type="button" className="btn btn-success">
                                     Finalizar compra
-                                </Link>
+                                </Link> <br/>
+                                <button style={{ margin: '10px' }} type="button" className="btn btn-outline-primary" onClick={addToCart}>
+                                    Añadir mas unidades
+                                </button>
+                                
                             </div>
                         }
                     </div>
