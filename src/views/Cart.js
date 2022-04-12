@@ -119,16 +119,9 @@ export const Cart = () => {
                     </div>
                     <div style={{textAlign:'center', padding:'10px'}}>
                     <button type="submit" className="btn btn-primary">Confirmar Compra</button>
-                    </div>
-                    {/* <input className='m-1' type='text' placeholder='Nombre'></input> <br />
-                    <input className='m-1' type='number' placeholder='Telefono'></input> <br />
-                    <input className='m-1' type='mail' placeholder='E-mail'></input> <br />
-                    <button className='m-3 btn btn-success' type='submit'>Enviar</button> */}
+                    </div> 
                   </form>
-                  <hr />
-                  {/* <div style={{textAlign:'center',  padding:'10px'}}>
-                  <button className='m-2 btn btn-outline-primary' onClick={updateOrder}>Actualizar orden</button>
-                  </div> */}
+                  <hr /> 
                 </div> 
             )
             : <>
