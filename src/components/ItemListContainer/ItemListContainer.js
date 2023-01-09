@@ -23,25 +23,12 @@ export const ItemListContainer = () =>{
             } 
     }
     
-    // const getDataCategory = async()=>{
-    //     try{
-    //         const productosCollection = collection(db, 'items');
-    //         const response = await getDocs(productosCollection);
-    //         const result = response.docs.map(doc=>{return {id: doc.id, ...doc.data()}})
-    //         setProductos(result.filter(e=>e.categoryId === categoryId)) 
-
-    //         } catch (error) {
-    //             console.warn("error", error);
-    //         } 
-    // }
-
     const getDataCategory_query = async()=>{
         try{
-            const q = query(collection(db, 'items'), where('category', '===', 'categoryId'));
-            const querySnapShot = await getDocs(q)
-             
-            setProductos(querySnapShot.docs.map(doc=> doc = {id: doc.id, ...doc.data()})) 
-
+            const productosCollection = collection(db, 'items');
+            const response = await getDocs(productosCollection);
+            const result = response.docs.map(doc=>{return {id: doc.id, ...doc.data()}})
+            setProductos(result.filter(e=>e.categoryId === categoryId)) 
             } catch (error) {
                 console.warn("error", error);
             } 

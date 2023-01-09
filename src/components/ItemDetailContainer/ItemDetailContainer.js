@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import '../ItemListContainer/ItemListContainer.css'  
 import { useParams } from 'react-router-dom' 
-import { ItemDetail } from '../ItemDetail/ItemDetail'
+import {ItemDetail} from './ItemDetail/ItemDetail'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../../utils/firebase'
 
@@ -29,7 +29,6 @@ import { db } from '../../utils/firebase'
 
     return(
         <>    
-             
             {loading ? 
                 <h2 style={{textAlign:"center", margin:'1rem'}}>Loading...</h2>
              : 

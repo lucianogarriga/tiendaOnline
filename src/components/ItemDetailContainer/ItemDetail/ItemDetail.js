@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
-import { CartContext } from '../../Context'
-import ItemCount from '../ItemCount/ItemCount'
-import '../ItemListContainer/ItemListContainer.css'
+import { CartContext } from '../../../Context'
+import ItemCount from '../../ItemCount/ItemCount' 
 
 export const ItemDetail = ({ item }) => {
 
