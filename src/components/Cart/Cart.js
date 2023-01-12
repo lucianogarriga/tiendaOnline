@@ -1,7 +1,7 @@
 import React from 'react' 
 import { useCartContext } from '../../Context';
 
-export const Cart = ({items = [] }) => {
+export const Cart = ( ) => {
     
  const {cartItems} = useCartContext();
  console.log(cartItems); 

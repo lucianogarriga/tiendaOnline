@@ -1,5 +1,4 @@
-import { async } from '@firebase/util';
-import { collection, doc, addDoc, Timestamp, updateDoc } from 'firebase/firestore';
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { CartContext } from '../Context';
@@ -30,18 +29,7 @@ export const Cart = () => {
       console.log('Error: ', error);
     }
   }
-
-  // const updateOrder = async () => {
-  //   const queryDoc = doc(db, 'orders', 'WhlyidyItxhkw2DENVXx');
-  //   await updateDoc(queryDoc, {
-  //     buyer: {
-  //       name: '',
-  //       phone: '',
-  //       email: '',
-  //     }
-  //   })
-  // }
-
+  
 
   return (
     <>
@@ -64,7 +52,7 @@ export const Cart = () => {
                             <div className="product" style={{ textAlign: 'center' }}>
                               <div className="row">
                                 <div className="col-md-3">
-                                  <img className="img-fluid mx-auto d-block image" width={'200px'} src={item.imageUrl} />
+                                  <img className="img-fluid mx-auto d-block image" width={'200px'} alt="Img product" src={item.imageUrl} />
                                 </div>
                                 <div className="col-md-8" >
                                   <div className="info" >
