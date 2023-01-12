@@ -4,7 +4,7 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 
 function App() {
   return (
-    <div className='App'> 
+    <div id="root"> 
       <ItemListContainer/>
     </div>
   );
