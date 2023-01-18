@@ -13,8 +13,7 @@ function App() {
    
   return (
     <>
-    <CartProvider>
-    <BrowserRouter>
+    <CartProvider> 
       <NavbarComp/>
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -23,8 +22,7 @@ function App() {
         <Route path="/cart" element={<Cart />}/>
         <Route path="/contexto" element={<CartProvider/>} />
       </Routes>
-    <Footer/>
-    </BrowserRouter>
+    <Footer/> 
     </CartProvider>
     </>
   );
