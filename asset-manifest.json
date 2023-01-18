@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tienda-online/static/css/main.790a02db.css",
-    "main.js": "/tienda-online/static/js/main.e16d2b9a.js",
+    "main.js": "/tienda-online/static/js/main.f154b706.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/tienda-online/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/tienda-online/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/tienda-online/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
@@ -11,10 +11,10 @@
     "static/media/cart.png": "/tienda-online/static/media/cart.ca15177f0225686930c3.png",
     "index.html": "/tienda-online/index.html",
     "main.790a02db.css.map": "/tienda-online/static/css/main.790a02db.css.map",
-    "main.e16d2b9a.js.map": "/tienda-online/static/js/main.e16d2b9a.js.map"
+    "main.f154b706.js.map": "/tienda-online/static/js/main.f154b706.js.map"
   },
   "entrypoints": [
     "static/css/main.790a02db.css",
-    "static/js/main.e16d2b9a.js"
+    "static/js/main.f154b706.js"
   ]
 }
