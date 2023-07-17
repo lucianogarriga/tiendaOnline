@@ -16,10 +16,7 @@ export const Cart = ( ) => {
             <>
               <p>
                 {i.item} x {i.amount}
-              </p>
-              {/* <button className="btn btn-warning" onClick={}>
-                Limpiar
-              </button> */}
+              </p> 
             </>
           );
         })
